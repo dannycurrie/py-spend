@@ -19,8 +19,9 @@ def getCategory(desc):
 
 def isExpenditure(row):
     try:
-        return int(row[2]) < 0
+        return float(row[2]) < 0
     except:
+        print(row)
         return False
 
 
@@ -34,7 +35,7 @@ with open('./put-data-here/data-cleaned.csv') as csv_file:
             parsedRows.append({
                 'date': row[0],
                 'desc': row[1],
-                'value': int(row[2]),
+                'value': float(row[2]),
                 'category': getCategory(row[1])
             })
 

@@ -1,3 +1,4 @@
 /categories/*
 /output/*
 /put-data-here/*
+/__pycache__/*
